@@ -1,39 +1,39 @@
 //
 //  ContentView.swift
-//  Appetizers
+//  Appetizer
 //
-//  Created by mahendran-14703 on 19/07/24.
+//  Created by Mithesh on 22/07/24.
 //
 
 import SwiftUI
 
-struct AppetizersTab: View {
+struct AppetizerTab: View {
     var body: some View {
         
         TabView {
-            AppetizersListView()
+            AppetizerListView()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
             
-            AppetizersListView()
+            OrderView()
                 .tabItem {
                     Image(systemName: "person")
                     Text("Account")
                     
-                }   
+                }
             
-            AppetizersListView()
+            AccountView()
                 .tabItem {
                     Image(systemName: "bag")
                     Text("Order")
-                    
                 }
         }
+        .tint(Color(.brandPrimary))
     }
 }
 
 #Preview {
-    AppetizersTab()
+    AppetizerTab()
 }
